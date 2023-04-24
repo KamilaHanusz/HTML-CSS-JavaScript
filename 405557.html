@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>moje3</title>
+		<link rel="stylesheet" href="405557.css">
+		<meta charset="uft-8">
+	</head>
+	<body>
+		<div id="box">
+			<div id="header">
+				<h1>Kalkulator podatków</h1>
+			</div>
+			
+			<form id="form1">
+				<p>Pensja brutto:</p>
+				<input class="input" id="brutto" type="text">
+			</form>
+			
+			<form id="form2">
+			    <select id="stan" placeholder="Wybierz stan">
+					<option value="" disabled selected hidden>Wybierz stan</option>
+					<option value = "Alabama">Alabama</option>
+					<option value = "Alaska">Alaska</option>
+					<option value = "Arizona">Arizona</option>
+					<option value = "Arkansas">Arkansas</option>
+			    </select>
+		    </form>
+			
+			<div id="info"></div>
+			
+			<hr>
+			
+			<form id="form3">
+				<p>Wielkość podatku:</p>
+				<input class="input" id="podatek" type="text" disabled>
+			</form>
+			
+			<form id="form4">
+				<p>Pensja netto:</p>
+				<input class="input" id="netto" type="text" disabled>
+			</form>
+			
+			<button onclick="oblicz()" type="submit">Oblicz</button>
+			<button onclick="wyczysc()" type="submit">Wyczyść</button>
+			
+			<script>
+				function oblicz() {
+				var brutto = document.getElementById("brutto").value;
+				var stan = document.getElementById("stan").value;
+				
+				switch(stan) {
+					case "Alabama": 
+						var podatek = 4;
+						break;
+					case "Alaska": 
+						var podatek = 0;
+						break;
+					case "Arizona": 
+						var podatek = 5.6;
+						break;
+					case "Arkansas": 
+						var podatek = 6.5;
+						break;
+				}
+				var podatek2 = (brutto*podatek/100).toFixed(2);
+				document.getElementById("podatek").value = podatek2;
+				
+				var netto = (brutto-podatek2).toFixed(2);
+				document.getElementById("netto").value = netto;
+				
+				document.getElementById("info").innerHTML = "Wysokość podatku: " + podatek + "%";
+			}
+			
+			function wyczysc() {
+				document.getElementById("brutto").value = "";
+				document.getElementById("stan").value = "";
+				document.getElementById("podatek").value = "";
+				document.getElementById("netto").value = "";
+				document.getElementById("info").innerHTML = "";
+			}
+			</script>
+		</div>
+	</body>
+</html>

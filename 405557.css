@@ -1,0 +1,80 @@
+body {
+	background-color: #141f1f;
+	font-family: Times New Roman;
+}
+
+#box {
+	background-color: #e0ebeb;
+	width: 30%;
+	height: 360px;
+	margin: auto;
+	border-radius: 8px;
+}
+
+#header {
+	background-color: #283e3e;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 8px;
+}
+
+h1 {
+	color: #e0ebeb;
+	text-shadow: 3px 3px 3px black;
+	text-align: center;
+} 
+
+p {
+	display: inline;
+	font-size: 18px;
+}
+
+#form1, #form2, #form3, #form4 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 15px;
+}
+
+#form2 {
+	margin-left: 119px;
+}
+
+hr {
+	height: 1px;
+	border: 1px solid darkgray;
+	background-color: darkgray;
+	width: 430px;
+	text-align: center;
+}
+
+button {
+	margin-left: 70px;
+	background-color: #283e3e;
+	color: #e0ebeb;
+	border: 1px solid darkgray;
+	box-shadow: 1px 1px 2px gray;
+	text-align: center;
+	width: 130px;
+	height: 30px;
+}
+
+input {
+	border-radius: 0px;
+	border: 1px solid darkgray;
+	height: 20px;
+}
+
+select {
+	border-radius: 0px;
+	border: 1px solid darkgray;
+	height: 25px;
+	width: 176px;
+}
+
+#podatek, #netto {
+	background-color: lightgray;
+}
+
+#info {
+	margin-left: 119px;
+}
