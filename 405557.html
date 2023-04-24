@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kalkulator napiwków</title>
+		<link rel="stylesheet" href="405557.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div id="box">
+			<div id="header">
+				<p>Kalkulator napiwków</p>
+			</div>
+			
+			<p>Podaj kwotę rachunku</p>
+			<form id="form1">
+				<input id="rachunek" type="text" placeholder="Kwota rachunku">
+				<p>zł</p>
+			</form>
+			
+			<p>Jak oceniasz obsługę?</p>
+			<form id="form2">
+			    <select id="ocena">
+					<option value="" disabled selected>-- Wybierz z poniższych --</option>
+					<option value="0.3">30% - wyróżniająca</option>
+					<option value="0.2">20% - dobra</option>
+					<option value="0.15">15% - średnia</option>
+					<option value="0.1">10% - zła</option>
+					<option value="0.05">5% - bardzo zła</option>
+			    </select>
+		    </form>
+			
+			<p>Ile osób dzieli rachunek?</p>
+			<form id="form3">
+				<input id="osoby" type="text" placeholder="Liczba osób płacących">
+			</form>
+			
+			<button onclick="oblicz()" type="button">Oblicz</button>
+			
+			<div id="tekst"></div>
+			<div id="wynik"></div>
+			<div id="kazdy"></div>
+			
+			<script>
+				function oblicz() {
+					var rachunek = document.getElementById("rachunek").value;
+					if (rachunek == "") {
+						alert("Wprowadź wartość rachunku!");
+						return;
+					}
+					var ocena = document.getElementById("ocena").value;
+					if (ocena == "") {
+						alert("Wprowadź ocenę!");
+						return;
+					}
+					
+					var osoby = document.getElementById("osoby").value;
+					if (osoby == "" || osoby == "0") {
+						var napiwek = (rachunek*ocena).toFixed(1);
+						document.getElementById("tekst").innerHTML = "KWOTA NAPIWKU";
+						document.getElementById("wynik").innerHTML = napiwek + "zł";
+					} else {
+						var napiwek = ((rachunek*ocena)/osoby).toFixed(1);
+						document.getElementById("tekst").innerHTML = "KWOTA NAPIWKU";
+						document.getElementById("wynik").innerHTML = napiwek + "zł";
+						document.getElementById("kazdy").innerHTML = "każdy";
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>

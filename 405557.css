@@ -1,0 +1,78 @@
+body {
+	background-color: #006600;
+	font-family: Helvetica;
+}
+
+#box {
+	background-color: #f7f7f7;
+	width: 20%;
+	height: 450px;
+	margin: auto;
+	border-radius: 15px;
+	box-shadow: 2px 2px 15px black;
+}
+
+#header {
+	background-color: #001a00;
+	border-radius: 15px 15px 0px 0px;
+}
+
+#header p {
+	color: white;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 16px;
+}
+
+p {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+#form1 p {
+	display: inline;
+}
+
+button {
+	border-radius: 1px;
+	background-color: #800000;
+	border: 0px;
+	color: white;
+	width: 200px;
+	height: 35px;
+	margin-left: 55px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+input {
+	border-radius: 0px;
+	height: 25px;
+	width: 200px;
+	border: 1px solid gray;
+}
+
+select {
+	border-radius: 3px;
+	height: 35px;
+	width: 230px;
+}
+
+#tekst, #wynik, #kazdy {
+	font-weight: bold;
+	text-align: center;
+	font-size: 15px;
+}
+
+#wynik {
+	color: red;
+	font-size: 12px;
+}
+
+#kazdy {
+	font-size: 12px;
+}
